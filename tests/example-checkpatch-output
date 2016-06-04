@@ -1,0 +1,4772 @@
+ERROR:C99_COMMENTS: do not use C99 // comments
+#80: FILE: monit.c:80:
++// libmonit
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void  do_init() should probably be void  do_init(void)
+#103: FILE: monit.c:103:
++static void  do_init();                       /* Initialize this application */
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void  do_reinit() should probably be void  do_reinit(void)
+#104: FILE: monit.c:104:
++static void  do_reinit();           /* Re-initialize the runtime application */
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void  do_exit() should probably be void  do_exit(void)
+#106: FILE: monit.c:106:
++static void  do_exit();                                    /* Finalize monit */
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void  do_default() should probably be void  do_default(void)
+#107: FILE: monit.c:107:
++static void  do_default();                              /* Do default action */
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void  help() should probably be void  help(void)
+#109: FILE: monit.c:109:
++static void  help();                 /* Print program help message to stdout */
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void  version() should probably be void  version(void)
+#110: FILE: monit.c:110:
++static void  version();                         /* Print version information */
+
+ERROR:INITIALISED_STATIC: do not initialise statics to false
+#132: FILE: monit.c:132:
++static volatile boolean_t heartbeatRunning = false;
+
+WARNING:VOLATILE: Use of volatile is usually wrong: see Documentation/volatile-considered-harmful.txt
+#132: FILE: monit.c:132:
++static volatile boolean_t heartbeatRunning = false;
+
+ERROR:GLOBAL_INITIALISERS: do not initialise globals to 0
+#134: FILE: monit.c:134:
++int ptreesize = 0;
+
+ERROR:GLOBAL_INITIALISERS: do not initialise globals to NULL
+#135: FILE: monit.c:135:
++ProcessTree_T *ptree = NULL;
+
+WARNING:LONG_LINE: line over 80 characters
+#137: FILE: monit.c:137:
++char *actionnames[] = {"ignore", "alert", "restart", "stop", "exec", "unmonitor", "start", "monitor", ""};
+
+WARNING:LONG_LINE: line over 80 characters
+#140: FILE: monit.c:140:
++char *operatornames[] = {"less than", "greater than", "equal to", "not equal to", "changed"};
+
+WARNING:LONG_LINE: line over 80 characters
+#142: FILE: monit.c:142:
++char *statusnames[] = {"Accessible", "Accessible", "Accessible", "Running", "Online with all services", "Running", "Accessible", "Status ok", "UP"};
+
+WARNING:LONG_LINE: line over 80 characters
+#143: FILE: monit.c:143:
++char *servicetypes[] = {"Filesystem", "Directory", "File", "Process", "Remote Host", "System", "Fifo", "Program", "Network"};
+
+WARNING:LONG_LINE: line over 80 characters
+#145: FILE: monit.c:145:
++char *icmpnames[] = {"Reply", "", "", "Destination Unreachable", "Source Quench", "Redirect", "", "", "Ping", "", "", "Time Exceeded", "Parameter Problem", "Timestamp Request", "Timestamp Reply", "Information Request", "Information Reply", "Address Mask Request", "Address Mask Reply"};
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#155: FILE: monit.c:155:
++int main(int argc, char **argv) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#156: FILE: monit.c:156:
++        Bootstrap(); // Bootstrap libmonit$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#156: FILE: monit.c:156:
++        Bootstrap(); // Bootstrap libmonit$
+
+ERROR:C99_COMMENTS: do not use C99 // comments
+#156: FILE: monit.c:156:
++        Bootstrap(); // Bootstrap libmonit
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#157: FILE: monit.c:157:
++        Bootstrap_setAbortHandler(vLogAbortHandler);  // Abort Monit on exceptions thrown by libmonit
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#157: FILE: monit.c:157:
++        Bootstrap_setAbortHandler(vLogAbortHandler);  // Abort Monit on exceptions thrown by libmonit$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#157: FILE: monit.c:157:
++        Bootstrap_setAbortHandler(vLogAbortHandler);  // Abort Monit on exceptions thrown by libmonit$
+
+ERROR:C99_COMMENTS: do not use C99 // comments
+#157: FILE: monit.c:157:
++        Bootstrap_setAbortHandler(vLogAbortHandler);  // Abort Monit on exceptions thrown by libmonit
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#158: FILE: monit.c:158:
++        Bootstrap_setErrorHandler(vLogError);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#158: FILE: monit.c:158:
++        Bootstrap_setErrorHandler(vLogError);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#159: FILE: monit.c:159:
++        setlocale(LC_ALL, "C");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#159: FILE: monit.c:159:
++        setlocale(LC_ALL, "C");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#160: FILE: monit.c:160:
++        prog = File_basename(argv[0]);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#160: FILE: monit.c:160:
++        prog = File_basename(argv[0]);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#162: FILE: monit.c:162:
++        Ssl_start();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#162: FILE: monit.c:162:
++        Ssl_start();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#164: FILE: monit.c:164:
++        init_env();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#164: FILE: monit.c:164:
++        init_env();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#165: FILE: monit.c:165:
++        handle_options(argc, argv);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#165: FILE: monit.c:165:
++        handle_options(argc, argv);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#166: FILE: monit.c:166:
++        do_init();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#166: FILE: monit.c:166:
++        do_init();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#167: FILE: monit.c:167:
++        do_action(argv);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#167: FILE: monit.c:167:
++        do_action(argv);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#168: FILE: monit.c:168:
++        do_exit();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#168: FILE: monit.c:168:
++        do_exit();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#169: FILE: monit.c:169:
++        return 0;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#169: FILE: monit.c:169:
++        return 0;$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - boolean_t do_wakeupcall() should probably be boolean_t do_wakeupcall(void)
+#177: FILE: monit.c:177:
++boolean_t do_wakeupcall() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#177: FILE: monit.c:177:
++boolean_t do_wakeupcall() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#178: FILE: monit.c:178:
++        pid_t pid;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#178: FILE: monit.c:178:
++        pid_t pid;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#180: FILE: monit.c:180:
++        if ((pid = exist_daemon()) > 0) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#180: FILE: monit.c:180:
++        if ((pid = exist_daemon()) > 0) {$
+
+ERROR:ASSIGN_IN_IF: do not use assignment in if condition
+#180: FILE: monit.c:180:
++        if ((pid = exist_daemon()) > 0) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#181: FILE: monit.c:181:
++                kill(pid, SIGUSR1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#181: FILE: monit.c:181:
++                kill(pid, SIGUSR1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#182: FILE: monit.c:182:
++                LogInfo("Monit daemon with PID %d awakened\n", pid);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#182: FILE: monit.c:182:
++                LogInfo("Monit daemon with PID %d awakened\n", pid);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#184: FILE: monit.c:184:
++                return true;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#184: FILE: monit.c:184:
++                return true;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#185: FILE: monit.c:185:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#185: FILE: monit.c:185:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#187: FILE: monit.c:187:
++        return false;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#187: FILE: monit.c:187:
++        return false;$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void _validateOnce() should probably be void _validateOnce(void)
+#194: FILE: monit.c:194:
++static void _validateOnce() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#194: FILE: monit.c:194:
++static void _validateOnce() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#195: FILE: monit.c:195:
++        if (State_open()) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#195: FILE: monit.c:195:
++        if (State_open()) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#196: FILE: monit.c:196:
++                State_restore();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#196: FILE: monit.c:196:
++                State_restore();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#197: FILE: monit.c:197:
++                validate();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#197: FILE: monit.c:197:
++                validate();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#198: FILE: monit.c:198:
++                State_save();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#198: FILE: monit.c:198:
++                State_save();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#199: FILE: monit.c:199:
++                State_close();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#199: FILE: monit.c:199:
++                State_close();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#200: FILE: monit.c:200:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#200: FILE: monit.c:200:
++        }$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void do_init() should probably be void do_init(void)
+#209: FILE: monit.c:209:
++static void do_init() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#209: FILE: monit.c:209:
++static void do_init() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#210: FILE: monit.c:210:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#211: FILE: monit.c:211:
++         * Register interest for the SIGTERM signal,$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#212: FILE: monit.c:212:
++         * in case we run in daemon mode this signal$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#213: FILE: monit.c:213:
++         * will terminate a running daemon.$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#214: FILE: monit.c:214:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#215: FILE: monit.c:215:
++        signal(SIGTERM, do_destroy);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#215: FILE: monit.c:215:
++        signal(SIGTERM, do_destroy);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#217: FILE: monit.c:217:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#218: FILE: monit.c:218:
++         * Register interest for the SIGUSER1 signal,$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#219: FILE: monit.c:219:
++         * in case we run in daemon mode this signal$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#220: FILE: monit.c:220:
++         * will wakeup a sleeping daemon.$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#221: FILE: monit.c:221:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#222: FILE: monit.c:222:
++        signal(SIGUSR1, do_wakeup);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#222: FILE: monit.c:222:
++        signal(SIGUSR1, do_wakeup);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#224: FILE: monit.c:224:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#225: FILE: monit.c:225:
++         * Register interest for the SIGINT signal,$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#226: FILE: monit.c:226:
++         * in case we run as a server but not as a daemon$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#227: FILE: monit.c:227:
++         * we need to catch this signal if the user pressed$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#228: FILE: monit.c:228:
++         * CTRL^C in the terminal$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#229: FILE: monit.c:229:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#230: FILE: monit.c:230:
++        signal(SIGINT, do_destroy);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#230: FILE: monit.c:230:
++        signal(SIGINT, do_destroy);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#232: FILE: monit.c:232:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#233: FILE: monit.c:233:
++         * Register interest for the SIGHUP signal,$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#234: FILE: monit.c:234:
++         * in case we run in daemon mode this signal$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#235: FILE: monit.c:235:
++         * will reload the configuration.$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#236: FILE: monit.c:236:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#237: FILE: monit.c:237:
++        signal(SIGHUP, do_reload);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#237: FILE: monit.c:237:
++        signal(SIGHUP, do_reload);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#239: FILE: monit.c:239:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#240: FILE: monit.c:240:
++         * Register no interest for the SIGPIPE signal,$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#241: FILE: monit.c:241:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#242: FILE: monit.c:242:
++        signal(SIGPIPE, SIG_IGN);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#242: FILE: monit.c:242:
++        signal(SIGPIPE, SIG_IGN);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#244: FILE: monit.c:244:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#245: FILE: monit.c:245:
++         * Initialize the random number generator$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#246: FILE: monit.c:246:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#247: FILE: monit.c:247:
++        srandom((unsigned)(Time_now() + getpid()));$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#247: FILE: monit.c:247:
++        srandom((unsigned)(Time_now() + getpid()));$
+
+WARNING:UNSPECIFIED_INT: Prefer 'unsigned int' to bare use of 'unsigned'
+#247: FILE: monit.c:247:
++        srandom((unsigned)(Time_now() + getpid()));
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#249: FILE: monit.c:249:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#250: FILE: monit.c:250:
++         * Initialize the Runtime mutex. This mutex$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#251: FILE: monit.c:251:
++         * is used to synchronize handling of global$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#252: FILE: monit.c:252:
++         * service data$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#253: FILE: monit.c:253:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#254: FILE: monit.c:254:
++        Mutex_init(Run.mutex);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#254: FILE: monit.c:254:
++        Mutex_init(Run.mutex);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#256: FILE: monit.c:256:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#257: FILE: monit.c:257:
++         * Initialize heartbeat mutex and condition$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#258: FILE: monit.c:258:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#259: FILE: monit.c:259:
++        Mutex_init(heartbeatMutex);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#259: FILE: monit.c:259:
++        Mutex_init(heartbeatMutex);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#260: FILE: monit.c:260:
++        Sem_init(heartbeatCond);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#260: FILE: monit.c:260:
++        Sem_init(heartbeatCond);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#262: FILE: monit.c:262:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#263: FILE: monit.c:263:
++         * Get the position of the control file$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#264: FILE: monit.c:264:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#265: FILE: monit.c:265:
++        if (! Run.files.control)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#265: FILE: monit.c:265:
++        if (! Run.files.control)$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#265: FILE: monit.c:265:
++        if (! Run.files.control)
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#266: FILE: monit.c:266:
++                Run.files.control = file_findControlFile();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#266: FILE: monit.c:266:
++                Run.files.control = file_findControlFile();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#268: FILE: monit.c:268:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#269: FILE: monit.c:269:
++         * Initialize the process information gathering interface$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#270: FILE: monit.c:270:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#271: FILE: monit.c:271:
++        if (init_process_info())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#271: FILE: monit.c:271:
++        if (init_process_info())$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#272: FILE: monit.c:272:
++                Run.flags |= Run_ProcessEngineEnabled;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#272: FILE: monit.c:272:
++                Run.flags |= Run_ProcessEngineEnabled;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#274: FILE: monit.c:274:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#275: FILE: monit.c:275:
++         * Start the Parser and create the service list. This will also set$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#276: FILE: monit.c:276:
++         * any Runtime constants defined in the controlfile.$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#277: FILE: monit.c:277:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#278: FILE: monit.c:278:
++        if (! parse(Run.files.control))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#278: FILE: monit.c:278:
++        if (! parse(Run.files.control))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#278: FILE: monit.c:278:
++        if (! parse(Run.files.control))
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#279: FILE: monit.c:279:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#279: FILE: monit.c:279:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#281: FILE: monit.c:281:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#282: FILE: monit.c:282:
++         * Initialize the log system$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#283: FILE: monit.c:283:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#284: FILE: monit.c:284:
++        if (! log_init())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#284: FILE: monit.c:284:
++        if (! log_init())$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#284: FILE: monit.c:284:
++        if (! log_init())
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#285: FILE: monit.c:285:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#285: FILE: monit.c:285:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#287: FILE: monit.c:287:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#288: FILE: monit.c:288:
++         * Did we find any service ?$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#289: FILE: monit.c:289:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#290: FILE: monit.c:290:
++        if (! servicelist) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#290: FILE: monit.c:290:
++        if (! servicelist) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#290: FILE: monit.c:290:
++        if (! servicelist) {
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#291: FILE: monit.c:291:
++                LogError("No services has been specified\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#291: FILE: monit.c:291:
++                LogError("No services has been specified\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#292: FILE: monit.c:292:
++                exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#292: FILE: monit.c:292:
++                exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#293: FILE: monit.c:293:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#293: FILE: monit.c:293:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#295: FILE: monit.c:295:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#296: FILE: monit.c:296:
++         * Initialize Runtime file variables$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#297: FILE: monit.c:297:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#298: FILE: monit.c:298:
++        file_init();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#298: FILE: monit.c:298:
++        file_init();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#300: FILE: monit.c:300:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#301: FILE: monit.c:301:
++         * Should we print debug information ?$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#302: FILE: monit.c:302:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#303: FILE: monit.c:303:
++        if (Run.debug) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#303: FILE: monit.c:303:
++        if (Run.debug) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#304: FILE: monit.c:304:
++                Util_printRunList();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#304: FILE: monit.c:304:
++                Util_printRunList();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#305: FILE: monit.c:305:
++                Util_printServiceList();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#305: FILE: monit.c:305:
++                Util_printServiceList();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#306: FILE: monit.c:306:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#306: FILE: monit.c:306:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#308: FILE: monit.c:308:
++        /*$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#309: FILE: monit.c:309:
++         * Reap any stray child processes we may have created$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#310: FILE: monit.c:310:
++         */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#311: FILE: monit.c:311:
++        atexit(waitforchildren);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#311: FILE: monit.c:311:
++        atexit(waitforchildren);$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void do_reinit() should probably be void do_reinit(void)
+#319: FILE: monit.c:319:
++static void do_reinit() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#319: FILE: monit.c:319:
++static void do_reinit() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#320: FILE: monit.c:320:
++        LogInfo("Awakened by the SIGHUP signal\n"$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#320: FILE: monit.c:320:
++        LogInfo("Awakened by the SIGHUP signal\n"$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#321: FILE: monit.c:321:
++                "Reinitializing Monit - Control file '%s'\n",$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#321: FILE: monit.c:321:
++                "Reinitializing Monit - Control file '%s'\n",$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#322: FILE: monit.c:322:
++                Run.files.control);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#322: FILE: monit.c:322:
++                Run.files.control);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#324: FILE: monit.c:324:
++        /* Wait non-blocking for any children that has exited. Since we$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#325: FILE: monit.c:325:
++         reinitialize any information about children we have setup to wait$
+
+WARNING:BLOCK_COMMENT_STYLE: Block comments use * on subsequent lines
+#325: FILE: monit.c:325:
++        /* Wait non-blocking for any children that has exited. Since we
++         reinitialize any information about children we have setup to wait
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#326: FILE: monit.c:326:
++         for will be lost. This may create zombie processes until Monit$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#327: FILE: monit.c:327:
++         itself exit. However, Monit will wait on all children that has exited$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#328: FILE: monit.c:328:
++         before it ifself exit. TODO: Later refactored versions will use a$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#329: FILE: monit.c:329:
++         globale process table which a sigchld handler can check */$
+
+WARNING:BLOCK_COMMENT_STYLE: Block comments use a trailing */ on a separate line
+#329: FILE: monit.c:329:
++         globale process table which a sigchld handler can check */
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#330: FILE: monit.c:330:
++        waitforchildren();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#330: FILE: monit.c:330:
++        waitforchildren();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#332: FILE: monit.c:332:
++        if (Run.mmonits && heartbeatRunning) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#332: FILE: monit.c:332:
++        if (Run.mmonits && heartbeatRunning) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#333: FILE: monit.c:333:
++                Sem_signal(heartbeatCond);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#333: FILE: monit.c:333:
++                Sem_signal(heartbeatCond);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#334: FILE: monit.c:334:
++                Thread_join(heartbeatThread);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#334: FILE: monit.c:334:
++                Thread_join(heartbeatThread);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#335: FILE: monit.c:335:
++                heartbeatRunning = false;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#335: FILE: monit.c:335:
++                heartbeatRunning = false;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#336: FILE: monit.c:336:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#336: FILE: monit.c:336:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#338: FILE: monit.c:338:
++        Run.flags &= ~Run_DoReload;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#338: FILE: monit.c:338:
++        Run.flags &= ~Run_DoReload;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#340: FILE: monit.c:340:
++        /* Stop http interface */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#341: FILE: monit.c:341:
++        if (Run.httpd.flags & Httpd_Net || Run.httpd.flags & Httpd_Unix)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#341: FILE: monit.c:341:
++        if (Run.httpd.flags & Httpd_Net || Run.httpd.flags & Httpd_Unix)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#342: FILE: monit.c:342:
++                monit_http(Httpd_Stop);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#342: FILE: monit.c:342:
++                monit_http(Httpd_Stop);$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#344: FILE: monit.c:344:
++        /* Save the current state (no changes are possible now since the http thread is stopped) */
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#344: FILE: monit.c:344:
++        /* Save the current state (no changes are possible now since the http thread is stopped) */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#345: FILE: monit.c:345:
++        State_save();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#345: FILE: monit.c:345:
++        State_save();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#346: FILE: monit.c:346:
++        State_close();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#346: FILE: monit.c:346:
++        State_close();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#348: FILE: monit.c:348:
++        /* Run the garbage collector */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#349: FILE: monit.c:349:
++        gc();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#349: FILE: monit.c:349:
++        gc();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#351: FILE: monit.c:351:
++        if (! parse(Run.files.control)) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#351: FILE: monit.c:351:
++        if (! parse(Run.files.control)) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#351: FILE: monit.c:351:
++        if (! parse(Run.files.control)) {
+             ^
+
+WARNING:LONG_LINE: line over 80 characters
+#352: FILE: monit.c:352:
++                LogError("%s stopped -- configuration file parsing error\n", prog);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#352: FILE: monit.c:352:
++                LogError("%s stopped -- configuration file parsing error\n", prog);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#352: FILE: monit.c:352:
++                LogError("%s stopped -- configuration file parsing error\n", prog);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#353: FILE: monit.c:353:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#353: FILE: monit.c:353:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#354: FILE: monit.c:354:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#354: FILE: monit.c:354:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#356: FILE: monit.c:356:
++        /* Close the current log */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#357: FILE: monit.c:357:
++        log_close();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#357: FILE: monit.c:357:
++        log_close();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#359: FILE: monit.c:359:
++        /* Reinstall the log system */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#360: FILE: monit.c:360:
++        if (! log_init())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#360: FILE: monit.c:360:
++        if (! log_init())$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#360: FILE: monit.c:360:
++        if (! log_init())
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#361: FILE: monit.c:361:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#361: FILE: monit.c:361:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#363: FILE: monit.c:363:
++        /* Did we find any services ?  */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#364: FILE: monit.c:364:
++        if (! servicelist) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#364: FILE: monit.c:364:
++        if (! servicelist) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#364: FILE: monit.c:364:
++        if (! servicelist) {
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#365: FILE: monit.c:365:
++                LogError("No services has been specified\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#365: FILE: monit.c:365:
++                LogError("No services has been specified\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#366: FILE: monit.c:366:
++                exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#366: FILE: monit.c:366:
++                exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#367: FILE: monit.c:367:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#367: FILE: monit.c:367:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#369: FILE: monit.c:369:
++        /* Reinitialize Runtime file variables */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#370: FILE: monit.c:370:
++        file_init();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#370: FILE: monit.c:370:
++        file_init();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#372: FILE: monit.c:372:
++        if (! file_createPidFile(Run.files.pid)) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#372: FILE: monit.c:372:
++        if (! file_createPidFile(Run.files.pid)) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#372: FILE: monit.c:372:
++        if (! file_createPidFile(Run.files.pid)) {
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#373: FILE: monit.c:373:
++                LogError("%s stopped -- cannot create a pid file\n", prog);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#373: FILE: monit.c:373:
++                LogError("%s stopped -- cannot create a pid file\n", prog);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#374: FILE: monit.c:374:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#374: FILE: monit.c:374:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#375: FILE: monit.c:375:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#375: FILE: monit.c:375:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#377: FILE: monit.c:377:
++        /* Update service data from the state repository */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#378: FILE: monit.c:378:
++        if (! State_open())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#378: FILE: monit.c:378:
++        if (! State_open())$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#378: FILE: monit.c:378:
++        if (! State_open())
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#379: FILE: monit.c:379:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#379: FILE: monit.c:379:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#380: FILE: monit.c:380:
++        State_restore();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#380: FILE: monit.c:380:
++        State_restore();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#382: FILE: monit.c:382:
++        /* Start http interface */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#383: FILE: monit.c:383:
++        if (can_http())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#383: FILE: monit.c:383:
++        if (can_http())$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#384: FILE: monit.c:384:
++                monit_http(Httpd_Start);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#384: FILE: monit.c:384:
++                monit_http(Httpd_Start);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#386: FILE: monit.c:386:
++        /* send the monit startup notification */$
+
+WARNING:LONG_LINE: line over 80 characters
+#387: FILE: monit.c:387:
++        Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_START, "Monit reloaded");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#387: FILE: monit.c:387:
++        Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_START, "Monit reloaded");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#387: FILE: monit.c:387:
++        Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_START, "Monit reloaded");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#389: FILE: monit.c:389:
++        if (Run.mmonits) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#389: FILE: monit.c:389:
++        if (Run.mmonits) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#390: FILE: monit.c:390:
++                Thread_create(heartbeatThread, heartbeat, NULL);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#390: FILE: monit.c:390:
++                Thread_create(heartbeatThread, heartbeat, NULL);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#391: FILE: monit.c:391:
++                heartbeatRunning = true;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#391: FILE: monit.c:391:
++                heartbeatRunning = true;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#392: FILE: monit.c:392:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#392: FILE: monit.c:392:
++        }$
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#399: FILE: monit.c:399:
++static void do_action(char **args) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#400: FILE: monit.c:400:
++        char *action = args[optind];$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#400: FILE: monit.c:400:
++        char *action = args[optind];$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#401: FILE: monit.c:401:
++        char *service = args[++optind];$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#401: FILE: monit.c:401:
++        char *service = args[++optind];$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#403: FILE: monit.c:403:
++        Run.flags |= Run_Once;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#403: FILE: monit.c:403:
++        Run.flags |= Run_Once;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#405: FILE: monit.c:405:
++        if (! action) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#405: FILE: monit.c:405:
++        if (! action) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#405: FILE: monit.c:405:
++        if (! action) {
+             ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#406: FILE: monit.c:406:
++                do_default();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#406: FILE: monit.c:406:
++                do_default();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#407: FILE: monit.c:407:
++        } else if (IS(action, "start")     ||$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#407: FILE: monit.c:407:
++        } else if (IS(action, "start")     ||$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#408: FILE: monit.c:408:
++                   IS(action, "stop")      ||$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#408: FILE: monit.c:408:
++                   IS(action, "stop")      ||$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#409: FILE: monit.c:409:
++                   IS(action, "monitor")   ||$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#409: FILE: monit.c:409:
++                   IS(action, "monitor")   ||$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#410: FILE: monit.c:410:
++                   IS(action, "unmonitor") ||$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#410: FILE: monit.c:410:
++                   IS(action, "unmonitor") ||$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#411: FILE: monit.c:411:
++                   IS(action, "restart")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#411: FILE: monit.c:411:
++                   IS(action, "restart")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#412: FILE: monit.c:412:
++                if (Run.mygroup || service) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#412: FILE: monit.c:412:
++                if (Run.mygroup || service) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#413: FILE: monit.c:413:
++                        int errors = 0;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#413: FILE: monit.c:413:
++                        int errors = 0;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#414: FILE: monit.c:414:
++                        List_T services = List_new();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#414: FILE: monit.c:414:
++                        List_T services = List_new();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#415: FILE: monit.c:415:
++                        if (Run.mygroup) {$
+
+WARNING:LINE_SPACING: Missing a blank line after declarations
+#415: FILE: monit.c:415:
++                        List_T services = List_new();
++                        if (Run.mygroup) {
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#415: FILE: monit.c:415:
++                        if (Run.mygroup) {$
+
+WARNING:LONG_LINE: line over 80 characters
+#416: FILE: monit.c:416:
++                                for (ServiceGroup_T sg = servicegrouplist; sg; sg = sg->next) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#416: FILE: monit.c:416:
++                                for (ServiceGroup_T sg = servicegrouplist; sg; sg = sg->next) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#416: FILE: monit.c:416:
++                                for (ServiceGroup_T sg = servicegrouplist; sg; sg = sg->next) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#417: FILE: monit.c:417:
++                                        if (IS(Run.mygroup, sg->name)) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#417: FILE: monit.c:417:
++                                        if (IS(Run.mygroup, sg->name)) {$
+
+WARNING:LONG_LINE: line over 80 characters
+#418: FILE: monit.c:418:
++                                                for (list_t m = sg->members->head; m; m = m->next) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#418: FILE: monit.c:418:
++                                                for (list_t m = sg->members->head; m; m = m->next) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#418: FILE: monit.c:418:
++                                                for (list_t m = sg->members->head; m; m = m->next) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#419: FILE: monit.c:419:
++                                                        Service_T s = m->e;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#419: FILE: monit.c:419:
++                                                        Service_T s = m->e;$
+
+WARNING:LONG_LINE: line over 80 characters
+#420: FILE: monit.c:420:
++                                                        List_append(services, s->name);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#420: FILE: monit.c:420:
++                                                        List_append(services, s->name);$
+
+WARNING:LINE_SPACING: Missing a blank line after declarations
+#420: FILE: monit.c:420:
++                                                        Service_T s = m->e;
++                                                        List_append(services, s->name);
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#420: FILE: monit.c:420:
++                                                        List_append(services, s->name);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#421: FILE: monit.c:421:
++                                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#421: FILE: monit.c:421:
++                                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#422: FILE: monit.c:422:
++                                                break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#422: FILE: monit.c:422:
++                                                break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#423: FILE: monit.c:423:
++                                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#423: FILE: monit.c:423:
++                                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#424: FILE: monit.c:424:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#424: FILE: monit.c:424:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#425: FILE: monit.c:425:
++                                if (List_length(services) == 0) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#425: FILE: monit.c:425:
++                                if (List_length(services) == 0) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#426: FILE: monit.c:426:
++                                        List_free(&services);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#426: FILE: monit.c:426:
++                                        List_free(&services);$
+
+WARNING:LONG_LINE: line over 80 characters
+#427: FILE: monit.c:427:
++                                        LogError("Group '%s' not found\n", Run.mygroup);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#427: FILE: monit.c:427:
++                                        LogError("Group '%s' not found\n", Run.mygroup);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#427: FILE: monit.c:427:
++                                        LogError("Group '%s' not found\n", Run.mygroup);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#428: FILE: monit.c:428:
++                                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#428: FILE: monit.c:428:
++                                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#429: FILE: monit.c:429:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#429: FILE: monit.c:429:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#430: FILE: monit.c:430:
++                        } else if (IS(service, "all")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#430: FILE: monit.c:430:
++                        } else if (IS(service, "all")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#431: FILE: monit.c:431:
++                                for (Service_T s = servicelist; s; s = s->next)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#431: FILE: monit.c:431:
++                                for (Service_T s = servicelist; s; s = s->next)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#432: FILE: monit.c:432:
++                                        List_append(services, s->name);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#432: FILE: monit.c:432:
++                                        List_append(services, s->name);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#433: FILE: monit.c:433:
++                        } else {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#433: FILE: monit.c:433:
++                        } else {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#434: FILE: monit.c:434:
++                                List_append(services, service);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#434: FILE: monit.c:434:
++                                List_append(services, service);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#435: FILE: monit.c:435:
++                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#435: FILE: monit.c:435:
++                        }$
+
+WARNING:LONG_LINE: line over 80 characters
+#436: FILE: monit.c:436:
++                        errors = exist_daemon() ? control_service_daemon(services, action) : control_service_string(services, action);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#436: FILE: monit.c:436:
++                        errors = exist_daemon() ? control_service_daemon(services, action) : control_service_string(services, action);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#436: FILE: monit.c:436:
++                        errors = exist_daemon() ? control_service_daemon(services, action) : control_service_string(services, action);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#437: FILE: monit.c:437:
++                        List_free(&services);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#437: FILE: monit.c:437:
++                        List_free(&services);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#438: FILE: monit.c:438:
++                        if (errors)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#438: FILE: monit.c:438:
++                        if (errors)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#439: FILE: monit.c:439:
++                                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#439: FILE: monit.c:439:
++                                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#440: FILE: monit.c:440:
++                } else {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#440: FILE: monit.c:440:
++                } else {$
+
+WARNING:LONG_LINE: line over 80 characters
+#441: FILE: monit.c:441:
++                        LogError("Please specify a service name or 'all' after %s\n", action);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#441: FILE: monit.c:441:
++                        LogError("Please specify a service name or 'all' after %s\n", action);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#441: FILE: monit.c:441:
++                        LogError("Please specify a service name or 'all' after %s\n", action);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#442: FILE: monit.c:442:
++                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#442: FILE: monit.c:442:
++                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#443: FILE: monit.c:443:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#443: FILE: monit.c:443:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#444: FILE: monit.c:444:
++        } else if (IS(action, "reload")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#444: FILE: monit.c:444:
++        } else if (IS(action, "reload")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#445: FILE: monit.c:445:
++                LogInfo("Reinitializing %s daemon\n", prog);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#445: FILE: monit.c:445:
++                LogInfo("Reinitializing %s daemon\n", prog);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#446: FILE: monit.c:446:
++                kill_daemon(SIGHUP);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#446: FILE: monit.c:446:
++                kill_daemon(SIGHUP);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#447: FILE: monit.c:447:
++        } else if (IS(action, "status")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#447: FILE: monit.c:447:
++        } else if (IS(action, "status")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#448: FILE: monit.c:448:
++                if (! status(LEVEL_NAME_FULL, Run.mygroup, service))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#448: FILE: monit.c:448:
++                if (! status(LEVEL_NAME_FULL, Run.mygroup, service))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#448: FILE: monit.c:448:
++                if (! status(LEVEL_NAME_FULL, Run.mygroup, service))
+                     ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#449: FILE: monit.c:449:
++                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#449: FILE: monit.c:449:
++                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#450: FILE: monit.c:450:
++        } else if (IS(action, "summary")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#450: FILE: monit.c:450:
++        } else if (IS(action, "summary")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#451: FILE: monit.c:451:
++                if (! status(LEVEL_NAME_SUMMARY, Run.mygroup, service))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#451: FILE: monit.c:451:
++                if (! status(LEVEL_NAME_SUMMARY, Run.mygroup, service))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#451: FILE: monit.c:451:
++                if (! status(LEVEL_NAME_SUMMARY, Run.mygroup, service))
+                     ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#452: FILE: monit.c:452:
++                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#452: FILE: monit.c:452:
++                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#453: FILE: monit.c:453:
++        } else if (IS(action, "procmatch")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#453: FILE: monit.c:453:
++        } else if (IS(action, "procmatch")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#454: FILE: monit.c:454:
++                if (! service) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#454: FILE: monit.c:454:
++                if (! service) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#454: FILE: monit.c:454:
++                if (! service) {
+                     ^
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#455: FILE: monit.c:455:
++                        printf("Invalid syntax - usage: procmatch \"<pattern>\"\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#455: FILE: monit.c:455:
++                        printf("Invalid syntax - usage: procmatch \"<pattern>\"\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#455: FILE: monit.c:455:
++                        printf("Invalid syntax - usage: procmatch \"<pattern>\"\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#456: FILE: monit.c:456:
++                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#456: FILE: monit.c:456:
++                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#457: FILE: monit.c:457:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#457: FILE: monit.c:457:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#458: FILE: monit.c:458:
++                process_testmatch(service);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#458: FILE: monit.c:458:
++                process_testmatch(service);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#459: FILE: monit.c:459:
++        } else if (IS(action, "quit")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#459: FILE: monit.c:459:
++        } else if (IS(action, "quit")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#460: FILE: monit.c:460:
++                kill_daemon(SIGTERM);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#460: FILE: monit.c:460:
++                kill_daemon(SIGTERM);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#461: FILE: monit.c:461:
++        } else if (IS(action, "validate")) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#461: FILE: monit.c:461:
++        } else if (IS(action, "validate")) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#462: FILE: monit.c:462:
++                if (do_wakeupcall())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#462: FILE: monit.c:462:
++                if (do_wakeupcall())$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#463: FILE: monit.c:463:
++                        status(LEVEL_NAME_FULL, Run.mygroup, service);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#463: FILE: monit.c:463:
++                        status(LEVEL_NAME_FULL, Run.mygroup, service);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#464: FILE: monit.c:464:
++                else$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#464: FILE: monit.c:464:
++                else$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#465: FILE: monit.c:465:
++                        _validateOnce();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#465: FILE: monit.c:465:
++                        _validateOnce();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#466: FILE: monit.c:466:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#466: FILE: monit.c:466:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#467: FILE: monit.c:467:
++        } else {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#467: FILE: monit.c:467:
++        } else {$
+
+WARNING:LONG_LINE: line over 80 characters
+#468: FILE: monit.c:468:
++                LogError("Invalid argument -- %s  (-h will show valid arguments)\n", action);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#468: FILE: monit.c:468:
++                LogError("Invalid argument -- %s  (-h will show valid arguments)\n", action);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#468: FILE: monit.c:468:
++                LogError("Invalid argument -- %s  (-h will show valid arguments)\n", action);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#469: FILE: monit.c:469:
++                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#469: FILE: monit.c:469:
++                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#470: FILE: monit.c:470:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#470: FILE: monit.c:470:
++        }$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void do_exit() should probably be void do_exit(void)
+#477: FILE: monit.c:477:
++static void do_exit() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#477: FILE: monit.c:477:
++static void do_exit() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#478: FILE: monit.c:478:
++        set_signal_block();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#478: FILE: monit.c:478:
++        set_signal_block();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#479: FILE: monit.c:479:
++        Run.flags |= Run_Stopped;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#479: FILE: monit.c:479:
++        Run.flags |= Run_Stopped;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#480: FILE: monit.c:480:
++        if ((Run.flags & Run_Daemon) && ! (Run.flags & Run_Once)) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#480: FILE: monit.c:480:
++        if ((Run.flags & Run_Daemon) && ! (Run.flags & Run_Once)) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:WxW)
+#480: FILE: monit.c:480:
++        if ((Run.flags & Run_Daemon) && ! (Run.flags & Run_Once)) {
+                                         ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#481: FILE: monit.c:481:
++                if (can_http())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#481: FILE: monit.c:481:
++                if (can_http())$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#482: FILE: monit.c:482:
++                        monit_http(Httpd_Stop);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#482: FILE: monit.c:482:
++                        monit_http(Httpd_Stop);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#484: FILE: monit.c:484:
++                if (Run.mmonits && heartbeatRunning) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#484: FILE: monit.c:484:
++                if (Run.mmonits && heartbeatRunning) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#485: FILE: monit.c:485:
++                        Sem_signal(heartbeatCond);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#485: FILE: monit.c:485:
++                        Sem_signal(heartbeatCond);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#486: FILE: monit.c:486:
++                        Thread_join(heartbeatThread);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#486: FILE: monit.c:486:
++                        Thread_join(heartbeatThread);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#487: FILE: monit.c:487:
++                        heartbeatRunning = false;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#487: FILE: monit.c:487:
++                        heartbeatRunning = false;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#488: FILE: monit.c:488:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#488: FILE: monit.c:488:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#490: FILE: monit.c:490:
++                LogInfo("Monit daemon with pid [%d] stopped\n", (int)getpid());$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#490: FILE: monit.c:490:
++                LogInfo("Monit daemon with pid [%d] stopped\n", (int)getpid());$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#492: FILE: monit.c:492:
++                /* send the monit stop notification */$
+
+WARNING:LONG_LINE: line over 80 characters
+#493: FILE: monit.c:493:
++                Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_STOP, "Monit %s stopped", VERSION);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#493: FILE: monit.c:493:
++                Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_STOP, "Monit %s stopped", VERSION);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#493: FILE: monit.c:493:
++                Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_STOP, "Monit %s stopped", VERSION);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#494: FILE: monit.c:494:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#494: FILE: monit.c:494:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#495: FILE: monit.c:495:
++        gc();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#495: FILE: monit.c:495:
++        gc();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#497: FILE: monit.c:497:
++        Ssl_stop();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#497: FILE: monit.c:497:
++        Ssl_stop();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#499: FILE: monit.c:499:
++        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#499: FILE: monit.c:499:
++        exit(0);$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void do_default() should probably be void do_default(void)
+#508: FILE: monit.c:508:
++static void do_default() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#508: FILE: monit.c:508:
++static void do_default() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#509: FILE: monit.c:509:
++        if (Run.flags & Run_Daemon) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#509: FILE: monit.c:509:
++        if (Run.flags & Run_Daemon) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#510: FILE: monit.c:510:
++                if (do_wakeupcall())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#510: FILE: monit.c:510:
++                if (do_wakeupcall())$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#511: FILE: monit.c:511:
++                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#511: FILE: monit.c:511:
++                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#513: FILE: monit.c:513:
++                Run.flags &= ~Run_Once;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#513: FILE: monit.c:513:
++                Run.flags &= ~Run_Once;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#514: FILE: monit.c:514:
++                if (can_http()) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#514: FILE: monit.c:514:
++                if (can_http()) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#515: FILE: monit.c:515:
++                        if (Run.httpd.flags & Httpd_Net)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#515: FILE: monit.c:515:
++                        if (Run.httpd.flags & Httpd_Net)$
+
+WARNING:LONG_LINE: line over 80 characters
+#516: FILE: monit.c:516:
++                                LogInfo("Starting Monit %s daemon with http interface at [%s]:%d\n", VERSION, Run.httpd.socket.net.address ? Run.httpd.socket.net.address : "*", Run.httpd.socket.net.port);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#516: FILE: monit.c:516:
++                                LogInfo("Starting Monit %s daemon with http interface at [%s]:%d\n", VERSION, Run.httpd.socket.net.address ? Run.httpd.socket.net.address : "*", Run.httpd.socket.net.port);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#516: FILE: monit.c:516:
++                                LogInfo("Starting Monit %s daemon with http interface at [%s]:%d\n", VERSION, Run.httpd.socket.net.address ? Run.httpd.socket.net.address : "*", Run.httpd.socket.net.port);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#517: FILE: monit.c:517:
++                        else if (Run.httpd.flags & Httpd_Unix)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#517: FILE: monit.c:517:
++                        else if (Run.httpd.flags & Httpd_Unix)$
+
+WARNING:LONG_LINE: line over 80 characters
+#518: FILE: monit.c:518:
++                                LogInfo("Starting Monit %s daemon with http interface at %s\n", VERSION, Run.httpd.socket.unix.path);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#518: FILE: monit.c:518:
++                                LogInfo("Starting Monit %s daemon with http interface at %s\n", VERSION, Run.httpd.socket.unix.path);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#518: FILE: monit.c:518:
++                                LogInfo("Starting Monit %s daemon with http interface at %s\n", VERSION, Run.httpd.socket.unix.path);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#519: FILE: monit.c:519:
++                } else {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#519: FILE: monit.c:519:
++                } else {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#520: FILE: monit.c:520:
++                        LogInfo("Starting Monit %s daemon\n", VERSION);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#520: FILE: monit.c:520:
++                        LogInfo("Starting Monit %s daemon\n", VERSION);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#521: FILE: monit.c:521:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#521: FILE: monit.c:521:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#523: FILE: monit.c:523:
++                if (Run.startdelay)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#523: FILE: monit.c:523:
++                if (Run.startdelay)$
+
+WARNING:LONG_LINE: line over 80 characters
+#524: FILE: monit.c:524:
++                        LogInfo("Monit start delay set -- pause for %ds\n", Run.startdelay);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#524: FILE: monit.c:524:
++                        LogInfo("Monit start delay set -- pause for %ds\n", Run.startdelay);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#524: FILE: monit.c:524:
++                        LogInfo("Monit start delay set -- pause for %ds\n", Run.startdelay);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#526: FILE: monit.c:526:
++                if (! (Run.flags & Run_Foreground))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#526: FILE: monit.c:526:
++                if (! (Run.flags & Run_Foreground))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#526: FILE: monit.c:526:
++                if (! (Run.flags & Run_Foreground))
+                     ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#527: FILE: monit.c:527:
++                        daemonize();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#527: FILE: monit.c:527:
++                        daemonize();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#528: FILE: monit.c:528:
++                else if (! Run.debug)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#528: FILE: monit.c:528:
++                else if (! Run.debug)$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#528: FILE: monit.c:528:
++                else if (! Run.debug)
+                          ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#529: FILE: monit.c:529:
++                        Util_redirectStdFds();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#529: FILE: monit.c:529:
++                        Util_redirectStdFds();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#531: FILE: monit.c:531:
++                if (! file_createPidFile(Run.files.pid)) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#531: FILE: monit.c:531:
++                if (! file_createPidFile(Run.files.pid)) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#531: FILE: monit.c:531:
++                if (! file_createPidFile(Run.files.pid)) {
+                     ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#532: FILE: monit.c:532:
++                        LogError("Monit daemon died\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#532: FILE: monit.c:532:
++                        LogError("Monit daemon died\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#533: FILE: monit.c:533:
++                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#533: FILE: monit.c:533:
++                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#534: FILE: monit.c:534:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#534: FILE: monit.c:534:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#536: FILE: monit.c:536:
++                if (! State_open())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#536: FILE: monit.c:536:
++                if (! State_open())$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#536: FILE: monit.c:536:
++                if (! State_open())
+                     ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#537: FILE: monit.c:537:
++                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#537: FILE: monit.c:537:
++                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#538: FILE: monit.c:538:
++                State_restore();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#538: FILE: monit.c:538:
++                State_restore();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#540: FILE: monit.c:540:
++                atexit(file_finalize);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#540: FILE: monit.c:540:
++                atexit(file_finalize);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#542: FILE: monit.c:542:
++                if (Run.startdelay) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#542: FILE: monit.c:542:
++                if (Run.startdelay) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#543: FILE: monit.c:543:
++                        time_t now = Time_now();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#543: FILE: monit.c:543:
++                        time_t now = Time_now();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#544: FILE: monit.c:544:
++                        time_t delay = now + Run.startdelay;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#544: FILE: monit.c:544:
++                        time_t delay = now + Run.startdelay;$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#546: FILE: monit.c:546:
++                        /* sleep can be interrupted by signal => make sure we paused long enough */
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#546: FILE: monit.c:546:
++                        /* sleep can be interrupted by signal => make sure we paused long enough */$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#547: FILE: monit.c:547:
++                        while (now < delay) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#547: FILE: monit.c:547:
++                        while (now < delay) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#548: FILE: monit.c:548:
++                                sleep((unsigned int)(delay - now));$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#548: FILE: monit.c:548:
++                                sleep((unsigned int)(delay - now));$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#549: FILE: monit.c:549:
++                                if (Run.flags & Run_Stopped)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#549: FILE: monit.c:549:
++                                if (Run.flags & Run_Stopped)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#550: FILE: monit.c:550:
++                                        do_exit();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#550: FILE: monit.c:550:
++                                        do_exit();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#551: FILE: monit.c:551:
++                                now = Time_now();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#551: FILE: monit.c:551:
++                                now = Time_now();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#552: FILE: monit.c:552:
++                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#552: FILE: monit.c:552:
++                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#553: FILE: monit.c:553:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#553: FILE: monit.c:553:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#555: FILE: monit.c:555:
++                if (can_http())$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#555: FILE: monit.c:555:
++                if (can_http())$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#556: FILE: monit.c:556:
++                        monit_http(Httpd_Start);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#556: FILE: monit.c:556:
++                        monit_http(Httpd_Start);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#558: FILE: monit.c:558:
++                /* send the monit startup notification */$
+
+WARNING:LONG_LINE: line over 80 characters
+#559: FILE: monit.c:559:
++                Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_START, "Monit %s started", VERSION);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#559: FILE: monit.c:559:
++                Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_START, "Monit %s started", VERSION);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#559: FILE: monit.c:559:
++                Event_post(Run.system, Event_Instance, State_Changed, Run.system->action_MONIT_START, "Monit %s started", VERSION);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#561: FILE: monit.c:561:
++                if (Run.mmonits) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#561: FILE: monit.c:561:
++                if (Run.mmonits) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#562: FILE: monit.c:562:
++                        Thread_create(heartbeatThread, heartbeat, NULL);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#562: FILE: monit.c:562:
++                        Thread_create(heartbeatThread, heartbeat, NULL);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#563: FILE: monit.c:563:
++                        heartbeatRunning = true;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#563: FILE: monit.c:563:
++                        heartbeatRunning = true;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#564: FILE: monit.c:564:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#564: FILE: monit.c:564:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#566: FILE: monit.c:566:
++                while (true) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#566: FILE: monit.c:566:
++                while (true) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#567: FILE: monit.c:567:
++                        validate();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#567: FILE: monit.c:567:
++                        validate();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#568: FILE: monit.c:568:
++                        State_save();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#568: FILE: monit.c:568:
++                        State_save();$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#570: FILE: monit.c:570:
++                        /* In the case that there is no pending action then sleep */
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#570: FILE: monit.c:570:
++                        /* In the case that there is no pending action then sleep */$
+
+WARNING:LONG_LINE: line over 80 characters
+#571: FILE: monit.c:571:
++                        if (! (Run.flags & Run_ActionPending) && ! (Run.flags & Run_Stopped))
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#571: FILE: monit.c:571:
++                        if (! (Run.flags & Run_ActionPending) && ! (Run.flags & Run_Stopped))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#571: FILE: monit.c:571:
++                        if (! (Run.flags & Run_ActionPending) && ! (Run.flags & Run_Stopped))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#571: FILE: monit.c:571:
++                        if (! (Run.flags & Run_ActionPending) && ! (Run.flags & Run_Stopped))
+                             ^
+
+ERROR:SPACING: space prohibited after that '!' (ctx:WxW)
+#571: FILE: monit.c:571:
++                        if (! (Run.flags & Run_ActionPending) && ! (Run.flags & Run_Stopped))
+                                                                  ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#572: FILE: monit.c:572:
++                                sleep(Run.polltime);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#572: FILE: monit.c:572:
++                                sleep(Run.polltime);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#574: FILE: monit.c:574:
++                        if (Run.flags & Run_DoWakeup) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#574: FILE: monit.c:574:
++                        if (Run.flags & Run_DoWakeup) {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#575: FILE: monit.c:575:
++                                Run.flags &= ~Run_DoWakeup;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#575: FILE: monit.c:575:
++                                Run.flags &= ~Run_DoWakeup;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#576: FILE: monit.c:576:
++                                LogInfo("Awakened by User defined signal 1\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#576: FILE: monit.c:576:
++                                LogInfo("Awakened by User defined signal 1\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#577: FILE: monit.c:577:
++                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#577: FILE: monit.c:577:
++                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#579: FILE: monit.c:579:
++                        if (Run.flags & Run_Stopped)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#579: FILE: monit.c:579:
++                        if (Run.flags & Run_Stopped)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#580: FILE: monit.c:580:
++                                do_exit();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#580: FILE: monit.c:580:
++                                do_exit();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#581: FILE: monit.c:581:
++                        else if (Run.flags & Run_DoReload)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#581: FILE: monit.c:581:
++                        else if (Run.flags & Run_DoReload)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#582: FILE: monit.c:582:
++                                do_reinit();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#582: FILE: monit.c:582:
++                                do_reinit();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#583: FILE: monit.c:583:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#583: FILE: monit.c:583:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#584: FILE: monit.c:584:
++        } else {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#584: FILE: monit.c:584:
++        } else {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#585: FILE: monit.c:585:
++                _validateOnce();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#585: FILE: monit.c:585:
++                _validateOnce();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#586: FILE: monit.c:586:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#586: FILE: monit.c:586:
++        }$
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#594: FILE: monit.c:594:
++static void handle_options(int argc, char **argv) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#595: FILE: monit.c:595:
++        int opt;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#595: FILE: monit.c:595:
++        int opt;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#596: FILE: monit.c:596:
++        int deferred_opt = 0;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#596: FILE: monit.c:596:
++        int deferred_opt = 0;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#597: FILE: monit.c:597:
++        opterr = 0;$
+
+WARNING:LINE_SPACING: Missing a blank line after declarations
+#597: FILE: monit.c:597:
++        int deferred_opt = 0;
++        opterr = 0;
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#597: FILE: monit.c:597:
++        opterr = 0;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#598: FILE: monit.c:598:
++        Run.mygroup = NULL;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#598: FILE: monit.c:598:
++        Run.mygroup = NULL;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#599: FILE: monit.c:599:
++        const char *shortopts = "c:d:g:l:p:s:HIirtvVh";$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#599: FILE: monit.c:599:
++        const char *shortopts = "c:d:g:l:p:s:HIirtvVh";$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#601: FILE: monit.c:601:
++        struct option longopts[] = {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#601: FILE: monit.c:601:
++        struct option longopts[] = {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#602: FILE: monit.c:602:
++                {"conf",        required_argument,      NULL,   'c'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#602: FILE: monit.c:602:
++                {"conf",        required_argument,      NULL,   'c'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#603: FILE: monit.c:603:
++                {"daemon",      required_argument,      NULL,   'd'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#603: FILE: monit.c:603:
++                {"daemon",      required_argument,      NULL,   'd'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#604: FILE: monit.c:604:
++                {"group",       required_argument,      NULL,   'g'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#604: FILE: monit.c:604:
++                {"group",       required_argument,      NULL,   'g'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#605: FILE: monit.c:605:
++                {"logfile",     required_argument,      NULL,   'l'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#605: FILE: monit.c:605:
++                {"logfile",     required_argument,      NULL,   'l'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#606: FILE: monit.c:606:
++                {"pidfile",     required_argument,      NULL,   'p'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#606: FILE: monit.c:606:
++                {"pidfile",     required_argument,      NULL,   'p'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#607: FILE: monit.c:607:
++                {"statefile",   required_argument,      NULL,   's'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#607: FILE: monit.c:607:
++                {"statefile",   required_argument,      NULL,   's'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#608: FILE: monit.c:608:
++                {"hash",        optional_argument,      NULL,   'H'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#608: FILE: monit.c:608:
++                {"hash",        optional_argument,      NULL,   'H'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#609: FILE: monit.c:609:
++                {"interactive", no_argument,            NULL,   'I'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#609: FILE: monit.c:609:
++                {"interactive", no_argument,            NULL,   'I'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#610: FILE: monit.c:610:
++                {"id",          no_argument,            NULL,   'i'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#610: FILE: monit.c:610:
++                {"id",          no_argument,            NULL,   'i'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#611: FILE: monit.c:611:
++                {"resetid",     no_argument,            NULL,   'r'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#611: FILE: monit.c:611:
++                {"resetid",     no_argument,            NULL,   'r'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#612: FILE: monit.c:612:
++                {"test",        no_argument,            NULL,   't'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#612: FILE: monit.c:612:
++                {"test",        no_argument,            NULL,   't'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#613: FILE: monit.c:613:
++                {"verbose",     no_argument,            NULL,   'v'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#613: FILE: monit.c:613:
++                {"verbose",     no_argument,            NULL,   'v'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#614: FILE: monit.c:614:
++                {"version",     no_argument,            NULL,   'V'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#614: FILE: monit.c:614:
++                {"version",     no_argument,            NULL,   'V'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#615: FILE: monit.c:615:
++                {"help",        no_argument,            NULL,   'h'},$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#615: FILE: monit.c:615:
++                {"help",        no_argument,            NULL,   'h'},$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#616: FILE: monit.c:616:
++                {0}$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#616: FILE: monit.c:616:
++                {0}$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#617: FILE: monit.c:617:
++        };$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#617: FILE: monit.c:617:
++        };$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#618: FILE: monit.c:618:
++        while ((opt = getopt_long(argc, argv, shortopts, longopts, NULL)) != -1)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#618: FILE: monit.c:618:
++        while ((opt = getopt_long(argc, argv, shortopts, longopts, NULL)) != -1)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#620: FILE: monit.c:620:
++                while ((opt = getopt(argc, argv, shortopts)) != -1)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#620: FILE: monit.c:620:
++                while ((opt = getopt(argc, argv, shortopts)) != -1)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#622: FILE: monit.c:622:
++                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#622: FILE: monit.c:622:
++                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#623: FILE: monit.c:623:
++                        switch (opt) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#623: FILE: monit.c:623:
++                        switch (opt) {$
+
+ERROR:SWITCH_CASE_INDENT_LEVEL: switch and case should be at the same indent
+#623: FILE: monit.c:623:
++                        switch (opt) {
++                                case 'c':
+[...]
++                                case 'd':
+[...]
++                                case 'g':
+[...]
++                                case 'l':
+[...]
++                                case 'p':
+[...]
++                                case 's':
+[...]
++                                case 'I':
+[...]
++                                case 'i':
+[...]
++                                case 'r':
+[...]
++                                case 't':
+[...]
++                                case 'v':
+[...]
++                                case 'H':
+[...]
++                                case 'V':
+[...]
++                                case 'h':
+[...]
++                                case '?':
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#624: FILE: monit.c:624:
++                                case 'c':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#624: FILE: monit.c:624:
++                                case 'c':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#625: FILE: monit.c:625:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#625: FILE: monit.c:625:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#626: FILE: monit.c:626:
++                                        char *f = optarg;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#626: FILE: monit.c:626:
++                                        char *f = optarg;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#627: FILE: monit.c:627:
++                                        if (f[0] != SEPARATOR_CHAR)$
+
+WARNING:LINE_SPACING: Missing a blank line after declarations
+#627: FILE: monit.c:627:
++                                        char *f = optarg;
++                                        if (f[0] != SEPARATOR_CHAR)
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#627: FILE: monit.c:627:
++                                        if (f[0] != SEPARATOR_CHAR)$
+
+WARNING:LONG_LINE: line over 80 characters
+#628: FILE: monit.c:628:
++                                                f = File_getRealPath(optarg, (char[PATH_MAX]){});
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#628: FILE: monit.c:628:
++                                                f = File_getRealPath(optarg, (char[PATH_MAX]){});$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#628: FILE: monit.c:628:
++                                                f = File_getRealPath(optarg, (char[PATH_MAX]){});$
+
+ERROR:SPACING: space required before the open brace '{'
+#628: FILE: monit.c:628:
++                                                f = File_getRealPath(optarg, (char[PATH_MAX]){});
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#629: FILE: monit.c:629:
++                                        if (! f)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#629: FILE: monit.c:629:
++                                        if (! f)$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#629: FILE: monit.c:629:
++                                        if (! f)
+                                             ^
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#630: FILE: monit.c:630:
++                                                THROW(AssertException, "The control file '%s' does not exist at %s",
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#630: FILE: monit.c:630:
++                                                THROW(AssertException, "The control file '%s' does not exist at %s",$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#630: FILE: monit.c:630:
++                                                THROW(AssertException, "The control file '%s' does not exist at %s",$
+
+WARNING:LONG_LINE: line over 80 characters
+#631: FILE: monit.c:631:
++                                                      Str_trunc(optarg, 80), Dir_cwd((char[STRLEN]){}, STRLEN));
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#631: FILE: monit.c:631:
++                                                      Str_trunc(optarg, 80), Dir_cwd((char[STRLEN]){}, STRLEN));$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#631: FILE: monit.c:631:
++                                                      Str_trunc(optarg, 80), Dir_cwd((char[STRLEN]){}, STRLEN));$
+
+ERROR:SPACING: space required before the open brace '{'
+#631: FILE: monit.c:631:
++                                                      Str_trunc(optarg, 80), Dir_cwd((char[STRLEN]){}, STRLEN));
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#632: FILE: monit.c:632:
++                                        if (! File_isFile(f))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#632: FILE: monit.c:632:
++                                        if (! File_isFile(f))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#632: FILE: monit.c:632:
++                                        if (! File_isFile(f))
+                                             ^
+
+WARNING:LONG_LINE: line over 80 characters
+#633: FILE: monit.c:633:
++                                                THROW(AssertException, "The control file '%s' is not a file", Str_trunc(f, 80));
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#633: FILE: monit.c:633:
++                                                THROW(AssertException, "The control file '%s' is not a file", Str_trunc(f, 80));$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#633: FILE: monit.c:633:
++                                                THROW(AssertException, "The control file '%s' is not a file", Str_trunc(f, 80));$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#634: FILE: monit.c:634:
++                                        if (! File_isReadable(f))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#634: FILE: monit.c:634:
++                                        if (! File_isReadable(f))$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#634: FILE: monit.c:634:
++                                        if (! File_isReadable(f))
+                                             ^
+
+WARNING:LONG_LINE: line over 80 characters
+#635: FILE: monit.c:635:
++                                                THROW(AssertException, "The control file '%s' is not readable", Str_trunc(f, 80));
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#635: FILE: monit.c:635:
++                                                THROW(AssertException, "The control file '%s' is not readable", Str_trunc(f, 80));$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#635: FILE: monit.c:635:
++                                                THROW(AssertException, "The control file '%s' is not readable", Str_trunc(f, 80));$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#636: FILE: monit.c:636:
++                                        Run.files.control = Str_dup(f);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#636: FILE: monit.c:636:
++                                        Run.files.control = Str_dup(f);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#637: FILE: monit.c:637:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#637: FILE: monit.c:637:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#638: FILE: monit.c:638:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#638: FILE: monit.c:638:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#639: FILE: monit.c:639:
++                                case 'd':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#639: FILE: monit.c:639:
++                                case 'd':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#640: FILE: monit.c:640:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#640: FILE: monit.c:640:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#641: FILE: monit.c:641:
++                                        Run.flags |= Run_Daemon;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#641: FILE: monit.c:641:
++                                        Run.flags |= Run_Daemon;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#642: FILE: monit.c:642:
++                                        sscanf(optarg, "%d", &Run.polltime);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#642: FILE: monit.c:642:
++                                        sscanf(optarg, "%d", &Run.polltime);$
+
+WARNING:NAKED_SSCANF: unchecked sscanf return value
+#642: FILE: monit.c:642:
++                                        sscanf(optarg, "%d", &Run.polltime);
+
+WARNING:SSCANF_TO_KSTRTO: Prefer kstrto<type> to single variable sscanf
+#642: FILE: monit.c:642:
++                                        sscanf(optarg, "%d", &Run.polltime);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#643: FILE: monit.c:643:
++                                        if (Run.polltime < 1) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#643: FILE: monit.c:643:
++                                        if (Run.polltime < 1) {$
+
+WARNING:LONG_LINE: line over 80 characters
+#644: FILE: monit.c:644:
++                                                LogError("Option -%c requires a natural number\n", opt);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#644: FILE: monit.c:644:
++                                                LogError("Option -%c requires a natural number\n", opt);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#644: FILE: monit.c:644:
++                                                LogError("Option -%c requires a natural number\n", opt);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#645: FILE: monit.c:645:
++                                                exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#645: FILE: monit.c:645:
++                                                exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#646: FILE: monit.c:646:
++                                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#646: FILE: monit.c:646:
++                                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#647: FILE: monit.c:647:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#647: FILE: monit.c:647:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#648: FILE: monit.c:648:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#648: FILE: monit.c:648:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#649: FILE: monit.c:649:
++                                case 'g':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#649: FILE: monit.c:649:
++                                case 'g':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#650: FILE: monit.c:650:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#650: FILE: monit.c:650:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#651: FILE: monit.c:651:
++                                        Run.mygroup = Str_dup(optarg);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#651: FILE: monit.c:651:
++                                        Run.mygroup = Str_dup(optarg);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#652: FILE: monit.c:652:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#652: FILE: monit.c:652:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#653: FILE: monit.c:653:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#653: FILE: monit.c:653:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#654: FILE: monit.c:654:
++                                case 'l':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#654: FILE: monit.c:654:
++                                case 'l':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#655: FILE: monit.c:655:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#655: FILE: monit.c:655:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#656: FILE: monit.c:656:
++                                        Run.files.log = Str_dup(optarg);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#656: FILE: monit.c:656:
++                                        Run.files.log = Str_dup(optarg);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#657: FILE: monit.c:657:
++                                        if (IS(Run.files.log, "syslog"))$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#657: FILE: monit.c:657:
++                                        if (IS(Run.files.log, "syslog"))$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#658: FILE: monit.c:658:
++                                                Run.flags |= Run_UseSyslog;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#658: FILE: monit.c:658:
++                                                Run.flags |= Run_UseSyslog;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#659: FILE: monit.c:659:
++                                        Run.flags |= Run_Log;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#659: FILE: monit.c:659:
++                                        Run.flags |= Run_Log;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#660: FILE: monit.c:660:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#660: FILE: monit.c:660:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#661: FILE: monit.c:661:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#661: FILE: monit.c:661:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#662: FILE: monit.c:662:
++                                case 'p':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#662: FILE: monit.c:662:
++                                case 'p':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#663: FILE: monit.c:663:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#663: FILE: monit.c:663:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#664: FILE: monit.c:664:
++                                        Run.files.pid = Str_dup(optarg);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#664: FILE: monit.c:664:
++                                        Run.files.pid = Str_dup(optarg);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#665: FILE: monit.c:665:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#665: FILE: monit.c:665:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#666: FILE: monit.c:666:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#666: FILE: monit.c:666:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#667: FILE: monit.c:667:
++                                case 's':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#667: FILE: monit.c:667:
++                                case 's':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#668: FILE: monit.c:668:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#668: FILE: monit.c:668:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#669: FILE: monit.c:669:
++                                        Run.files.state = Str_dup(optarg);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#669: FILE: monit.c:669:
++                                        Run.files.state = Str_dup(optarg);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#670: FILE: monit.c:670:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#670: FILE: monit.c:670:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#671: FILE: monit.c:671:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#671: FILE: monit.c:671:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#672: FILE: monit.c:672:
++                                case 'I':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#672: FILE: monit.c:672:
++                                case 'I':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#673: FILE: monit.c:673:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#673: FILE: monit.c:673:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#674: FILE: monit.c:674:
++                                        Run.flags |= Run_Foreground;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#674: FILE: monit.c:674:
++                                        Run.flags |= Run_Foreground;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#675: FILE: monit.c:675:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#675: FILE: monit.c:675:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#676: FILE: monit.c:676:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#676: FILE: monit.c:676:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#677: FILE: monit.c:677:
++                                case 'i':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#677: FILE: monit.c:677:
++                                case 'i':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#678: FILE: monit.c:678:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#678: FILE: monit.c:678:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#679: FILE: monit.c:679:
++                                        deferred_opt = 'i';$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#679: FILE: monit.c:679:
++                                        deferred_opt = 'i';$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#680: FILE: monit.c:680:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#680: FILE: monit.c:680:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#681: FILE: monit.c:681:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#681: FILE: monit.c:681:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#682: FILE: monit.c:682:
++                                case 'r':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#682: FILE: monit.c:682:
++                                case 'r':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#683: FILE: monit.c:683:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#683: FILE: monit.c:683:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#684: FILE: monit.c:684:
++                                        deferred_opt = 'r';$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#684: FILE: monit.c:684:
++                                        deferred_opt = 'r';$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#685: FILE: monit.c:685:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#685: FILE: monit.c:685:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#686: FILE: monit.c:686:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#686: FILE: monit.c:686:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#687: FILE: monit.c:687:
++                                case 't':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#687: FILE: monit.c:687:
++                                case 't':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#688: FILE: monit.c:688:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#688: FILE: monit.c:688:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#689: FILE: monit.c:689:
++                                        deferred_opt = 't';$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#689: FILE: monit.c:689:
++                                        deferred_opt = 't';$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#690: FILE: monit.c:690:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#690: FILE: monit.c:690:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#691: FILE: monit.c:691:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#691: FILE: monit.c:691:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#692: FILE: monit.c:692:
++                                case 'v':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#692: FILE: monit.c:692:
++                                case 'v':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#693: FILE: monit.c:693:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#693: FILE: monit.c:693:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#694: FILE: monit.c:694:
++                                        Run.debug++;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#694: FILE: monit.c:694:
++                                        Run.debug++;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#695: FILE: monit.c:695:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#695: FILE: monit.c:695:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#696: FILE: monit.c:696:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#696: FILE: monit.c:696:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#697: FILE: monit.c:697:
++                                case 'H':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#697: FILE: monit.c:697:
++                                case 'H':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#698: FILE: monit.c:698:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#698: FILE: monit.c:698:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#699: FILE: monit.c:699:
++                                        if (argc > optind)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#699: FILE: monit.c:699:
++                                        if (argc > optind)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#700: FILE: monit.c:700:
++                                                Util_printHash(argv[optind]);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#700: FILE: monit.c:700:
++                                                Util_printHash(argv[optind]);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#701: FILE: monit.c:701:
++                                        else$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#701: FILE: monit.c:701:
++                                        else$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#702: FILE: monit.c:702:
++                                                Util_printHash(NULL);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#702: FILE: monit.c:702:
++                                                Util_printHash(NULL);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#703: FILE: monit.c:703:
++                                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#703: FILE: monit.c:703:
++                                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#704: FILE: monit.c:704:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#704: FILE: monit.c:704:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#705: FILE: monit.c:705:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#705: FILE: monit.c:705:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#706: FILE: monit.c:706:
++                                case 'V':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#706: FILE: monit.c:706:
++                                case 'V':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#707: FILE: monit.c:707:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#707: FILE: monit.c:707:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#708: FILE: monit.c:708:
++                                        version();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#708: FILE: monit.c:708:
++                                        version();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#709: FILE: monit.c:709:
++                                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#709: FILE: monit.c:709:
++                                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#710: FILE: monit.c:710:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#710: FILE: monit.c:710:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#711: FILE: monit.c:711:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#711: FILE: monit.c:711:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#712: FILE: monit.c:712:
++                                case 'h':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#712: FILE: monit.c:712:
++                                case 'h':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#713: FILE: monit.c:713:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#713: FILE: monit.c:713:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#714: FILE: monit.c:714:
++                                        help();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#714: FILE: monit.c:714:
++                                        help();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#715: FILE: monit.c:715:
++                                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#715: FILE: monit.c:715:
++                                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#716: FILE: monit.c:716:
++                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#716: FILE: monit.c:716:
++                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#717: FILE: monit.c:717:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#717: FILE: monit.c:717:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#718: FILE: monit.c:718:
++                                case '?':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#718: FILE: monit.c:718:
++                                case '?':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#719: FILE: monit.c:719:
++                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#719: FILE: monit.c:719:
++                                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#720: FILE: monit.c:720:
++                                        switch (optopt) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#720: FILE: monit.c:720:
++                                        switch (optopt) {$
+
+ERROR:SWITCH_CASE_INDENT_LEVEL: switch and case should be at the same indent
+#720: FILE: monit.c:720:
++                                        switch (optopt) {
++                                                case 'c':
++                                                case 'd':
++                                                case 'g':
++                                                case 'l':
++                                                case 'p':
++                                                case 's':
+[...]
++                                                default:
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#721: FILE: monit.c:721:
++                                                case 'c':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#721: FILE: monit.c:721:
++                                                case 'c':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#722: FILE: monit.c:722:
++                                                case 'd':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#722: FILE: monit.c:722:
++                                                case 'd':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#723: FILE: monit.c:723:
++                                                case 'g':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#723: FILE: monit.c:723:
++                                                case 'g':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#724: FILE: monit.c:724:
++                                                case 'l':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#724: FILE: monit.c:724:
++                                                case 'l':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#725: FILE: monit.c:725:
++                                                case 'p':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#725: FILE: monit.c:725:
++                                                case 'p':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#726: FILE: monit.c:726:
++                                                case 's':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#726: FILE: monit.c:726:
++                                                case 's':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#727: FILE: monit.c:727:
++                                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#727: FILE: monit.c:727:
++                                                {$
+
+WARNING:LONG_LINE: line over 80 characters
+#728: FILE: monit.c:728:
++                                                        LogError("Option -- %c requires an argument\n", optopt);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#728: FILE: monit.c:728:
++                                                        LogError("Option -- %c requires an argument\n", optopt);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#728: FILE: monit.c:728:
++                                                        LogError("Option -- %c requires an argument\n", optopt);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#729: FILE: monit.c:729:
++                                                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#729: FILE: monit.c:729:
++                                                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#730: FILE: monit.c:730:
++                                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#730: FILE: monit.c:730:
++                                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#731: FILE: monit.c:731:
++                                                default:$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#732: FILE: monit.c:732:
++                                                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#732: FILE: monit.c:732:
++                                                {$
+
+WARNING:LONG_LINE: line over 80 characters
+#733: FILE: monit.c:733:
++                                                        LogError("Invalid option -- %c  (-h will show valid options)\n", optopt);
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#733: FILE: monit.c:733:
++                                                        LogError("Invalid option -- %c  (-h will show valid options)\n", optopt);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#733: FILE: monit.c:733:
++                                                        LogError("Invalid option -- %c  (-h will show valid options)\n", optopt);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#734: FILE: monit.c:734:
++                                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#734: FILE: monit.c:734:
++                                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#735: FILE: monit.c:735:
++                                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#735: FILE: monit.c:735:
++                                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#736: FILE: monit.c:736:
++                                        exit(1);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#736: FILE: monit.c:736:
++                                        exit(1);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#737: FILE: monit.c:737:
++                                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#737: FILE: monit.c:737:
++                                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#738: FILE: monit.c:738:
++                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#738: FILE: monit.c:738:
++                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#739: FILE: monit.c:739:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#739: FILE: monit.c:739:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#740: FILE: monit.c:740:
++        /* Handle deferred options to make arguments to the program positional$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#741: FILE: monit.c:741:
++         independent. These options are handled last, here as they represent exit
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#741: FILE: monit.c:741:
++         independent. These options are handled last, here as they represent exit$
+
+WARNING:BLOCK_COMMENT_STYLE: Block comments use * on subsequent lines
+#741: FILE: monit.c:741:
++        /* Handle deferred options to make arguments to the program positional
++         independent. These options are handled last, here as they represent exit
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#742: FILE: monit.c:742:
++         points in the application and the control-file might be set with -c and$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#743: FILE: monit.c:743:
++         these options need to respect the new control-file location as they call
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#743: FILE: monit.c:743:
++         these options need to respect the new control-file location as they call$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#744: FILE: monit.c:744:
++         do_init */$
+
+WARNING:BLOCK_COMMENT_STYLE: Block comments use a trailing */ on a separate line
+#744: FILE: monit.c:744:
++         do_init */
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#745: FILE: monit.c:745:
++        switch (deferred_opt) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#745: FILE: monit.c:745:
++        switch (deferred_opt) {$
+
+ERROR:SWITCH_CASE_INDENT_LEVEL: switch and case should be at the same indent
+#745: FILE: monit.c:745:
++        switch (deferred_opt) {
++                case 't':
+[...]
++                case 'r':
+[...]
++                case 'i':
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#746: FILE: monit.c:746:
++                case 't':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#746: FILE: monit.c:746:
++                case 't':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#747: FILE: monit.c:747:
++                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#747: FILE: monit.c:747:
++                {$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#748: FILE: monit.c:748:
++                        do_init(); // Parses control file and initialize program, exit on error
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#748: FILE: monit.c:748:
++                        do_init(); // Parses control file and initialize program, exit on error$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#748: FILE: monit.c:748:
++                        do_init(); // Parses control file and initialize program, exit on error$
+
+ERROR:C99_COMMENTS: do not use C99 // comments
+#748: FILE: monit.c:748:
++                        do_init(); // Parses control file and initialize program, exit on error
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#749: FILE: monit.c:749:
++                        printf("Control file syntax OK\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#749: FILE: monit.c:749:
++                        printf("Control file syntax OK\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#750: FILE: monit.c:750:
++                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#750: FILE: monit.c:750:
++                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#751: FILE: monit.c:751:
++                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#751: FILE: monit.c:751:
++                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#752: FILE: monit.c:752:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#752: FILE: monit.c:752:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#753: FILE: monit.c:753:
++                case 'r':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#753: FILE: monit.c:753:
++                case 'r':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#754: FILE: monit.c:754:
++                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#754: FILE: monit.c:754:
++                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#755: FILE: monit.c:755:
++                        do_init();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#755: FILE: monit.c:755:
++                        do_init();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#756: FILE: monit.c:756:
++                        assert(Run.id);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#756: FILE: monit.c:756:
++                        assert(Run.id);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#757: FILE: monit.c:757:
++                        printf("Reset Monit Id? [y/n]> ");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#757: FILE: monit.c:757:
++                        printf("Reset Monit Id? [y/n]> ");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#758: FILE: monit.c:758:
++                        if ( getchar() == 'y') {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#758: FILE: monit.c:758:
++                        if ( getchar() == 'y') {$
+
+ERROR:SPACING: space prohibited after that open parenthesis '('
+#758: FILE: monit.c:758:
++                        if ( getchar() == 'y') {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#759: FILE: monit.c:759:
++                                File_delete(Run.files.id);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#759: FILE: monit.c:759:
++                                File_delete(Run.files.id);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#760: FILE: monit.c:760:
++                                Util_monitId(Run.files.id);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#760: FILE: monit.c:760:
++                                Util_monitId(Run.files.id);$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#761: FILE: monit.c:761:
++                                kill_daemon(SIGHUP); // make any running Monit Daemon reload the new ID-File
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#761: FILE: monit.c:761:
++                                kill_daemon(SIGHUP); // make any running Monit Daemon reload the new ID-File$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#761: FILE: monit.c:761:
++                                kill_daemon(SIGHUP); // make any running Monit Daemon reload the new ID-File$
+
+ERROR:C99_COMMENTS: do not use C99 // comments
+#761: FILE: monit.c:761:
++                                kill_daemon(SIGHUP); // make any running Monit Daemon reload the new ID-File
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#762: FILE: monit.c:762:
++                        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#762: FILE: monit.c:762:
++                        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#763: FILE: monit.c:763:
++                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#763: FILE: monit.c:763:
++                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#764: FILE: monit.c:764:
++                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#764: FILE: monit.c:764:
++                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#765: FILE: monit.c:765:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#765: FILE: monit.c:765:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#766: FILE: monit.c:766:
++                case 'i':$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#766: FILE: monit.c:766:
++                case 'i':$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#767: FILE: monit.c:767:
++                {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#767: FILE: monit.c:767:
++                {$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#768: FILE: monit.c:768:
++                        do_init();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#768: FILE: monit.c:768:
++                        do_init();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#769: FILE: monit.c:769:
++                        assert(Run.id);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#769: FILE: monit.c:769:
++                        assert(Run.id);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#770: FILE: monit.c:770:
++                        printf("Monit ID: %s\n", Run.id);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#770: FILE: monit.c:770:
++                        printf("Monit ID: %s\n", Run.id);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#771: FILE: monit.c:771:
++                        exit(0);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#771: FILE: monit.c:771:
++                        exit(0);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#772: FILE: monit.c:772:
++                        break;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#772: FILE: monit.c:772:
++                        break;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#773: FILE: monit.c:773:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#773: FILE: monit.c:773:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#774: FILE: monit.c:774:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#774: FILE: monit.c:774:
++        }$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void help() should probably be void help(void)
+#781: FILE: monit.c:781:
++static void help() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#781: FILE: monit.c:781:
++static void help() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#782: FILE: monit.c:782:
++        printf("Usage: %s [options]+ [command]\n", prog);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#782: FILE: monit.c:782:
++        printf("Usage: %s [options]+ [command]\n", prog);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#783: FILE: monit.c:783:
++        printf("Options are as follows:\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#783: FILE: monit.c:783:
++        printf("Options are as follows:\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#784: FILE: monit.c:784:
++        printf(" -c file       Use this control file\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#784: FILE: monit.c:784:
++        printf(" -c file       Use this control file\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#785: FILE: monit.c:785:
++        printf(" -d n          Run as a daemon once per n seconds\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#785: FILE: monit.c:785:
++        printf(" -d n          Run as a daemon once per n seconds\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#786: FILE: monit.c:786:
++        printf(" -g name       Set group name for monit commands\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#786: FILE: monit.c:786:
++        printf(" -g name       Set group name for monit commands\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#787: FILE: monit.c:787:
++        printf(" -l logfile    Print log information to this file\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#787: FILE: monit.c:787:
++        printf(" -l logfile    Print log information to this file\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#788: FILE: monit.c:788:
++        printf(" -p pidfile    Use this lock file in daemon mode\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#788: FILE: monit.c:788:
++        printf(" -p pidfile    Use this lock file in daemon mode\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#789: FILE: monit.c:789:
++        printf(" -s statefile  Set the file monit should write state information to\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#789: FILE: monit.c:789:
++        printf(" -s statefile  Set the file monit should write state information to\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#789: FILE: monit.c:789:
++        printf(" -s statefile  Set the file monit should write state information to\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#790: FILE: monit.c:790:
++        printf(" -I            Do not run in background (needed for run from init)\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#790: FILE: monit.c:790:
++        printf(" -I            Do not run in background (needed for run from init)\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#790: FILE: monit.c:790:
++        printf(" -I            Do not run in background (needed for run from init)\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#791: FILE: monit.c:791:
++        printf(" --id          Print Monit's unique ID\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#791: FILE: monit.c:791:
++        printf(" --id          Print Monit's unique ID\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#792: FILE: monit.c:792:
++        printf(" --resetid     Reset Monit's unique ID. Use with caution\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#792: FILE: monit.c:792:
++        printf(" --resetid     Reset Monit's unique ID. Use with caution\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#793: FILE: monit.c:793:
++        printf(" -t            Run syntax check for the control file\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#793: FILE: monit.c:793:
++        printf(" -t            Run syntax check for the control file\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#794: FILE: monit.c:794:
++        printf(" -v            Verbose mode, work noisy (diagnostic output)\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#794: FILE: monit.c:794:
++        printf(" -v            Verbose mode, work noisy (diagnostic output)\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#795: FILE: monit.c:795:
++        printf(" -vv           Very verbose mode, same as -v plus log stacktrace on error\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#795: FILE: monit.c:795:
++        printf(" -vv           Very verbose mode, same as -v plus log stacktrace on error\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#795: FILE: monit.c:795:
++        printf(" -vv           Very verbose mode, same as -v plus log stacktrace on error\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#796: FILE: monit.c:796:
++        printf(" -H [filename] Print SHA1 and MD5 hashes of the file or of stdin if the\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#796: FILE: monit.c:796:
++        printf(" -H [filename] Print SHA1 and MD5 hashes of the file or of stdin if the\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#796: FILE: monit.c:796:
++        printf(" -H [filename] Print SHA1 and MD5 hashes of the file or of stdin if the\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#797: FILE: monit.c:797:
++        printf("               filename is omited; monit will exit afterwards\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#797: FILE: monit.c:797:
++        printf("               filename is omited; monit will exit afterwards\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#797: FILE: monit.c:797:
++        printf("               filename is omited; monit will exit afterwards\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#798: FILE: monit.c:798:
++        printf(" -V            Print version number and patchlevel\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#798: FILE: monit.c:798:
++        printf(" -V            Print version number and patchlevel\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#799: FILE: monit.c:799:
++        printf(" -h            Print this text\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#799: FILE: monit.c:799:
++        printf(" -h            Print this text\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#800: FILE: monit.c:800:
++        printf("Optional commands are as follows:\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#800: FILE: monit.c:800:
++        printf("Optional commands are as follows:\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#801: FILE: monit.c:801:
++        printf(" start all           - Start all services\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#801: FILE: monit.c:801:
++        printf(" start all           - Start all services\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#802: FILE: monit.c:802:
++        printf(" start <name>        - Only start the named service\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#802: FILE: monit.c:802:
++        printf(" start <name>        - Only start the named service\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#803: FILE: monit.c:803:
++        printf(" stop all            - Stop all services\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#803: FILE: monit.c:803:
++        printf(" stop all            - Stop all services\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#804: FILE: monit.c:804:
++        printf(" stop <name>         - Only stop the named service\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#804: FILE: monit.c:804:
++        printf(" stop <name>         - Only stop the named service\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#805: FILE: monit.c:805:
++        printf(" restart all         - Stop and start all services\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#805: FILE: monit.c:805:
++        printf(" restart all         - Stop and start all services\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#806: FILE: monit.c:806:
++        printf(" restart <name>      - Only restart the named service\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#806: FILE: monit.c:806:
++        printf(" restart <name>      - Only restart the named service\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#807: FILE: monit.c:807:
++        printf(" monitor all         - Enable monitoring of all services\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#807: FILE: monit.c:807:
++        printf(" monitor all         - Enable monitoring of all services\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#808: FILE: monit.c:808:
++        printf(" monitor <name>      - Only enable monitoring of the named service\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#808: FILE: monit.c:808:
++        printf(" monitor <name>      - Only enable monitoring of the named service\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#808: FILE: monit.c:808:
++        printf(" monitor <name>      - Only enable monitoring of the named service\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#809: FILE: monit.c:809:
++        printf(" unmonitor all       - Disable monitoring of all services\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#809: FILE: monit.c:809:
++        printf(" unmonitor all       - Disable monitoring of all services\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#810: FILE: monit.c:810:
++        printf(" unmonitor <name>    - Only disable monitoring of the named service\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#810: FILE: monit.c:810:
++        printf(" unmonitor <name>    - Only disable monitoring of the named service\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#810: FILE: monit.c:810:
++        printf(" unmonitor <name>    - Only disable monitoring of the named service\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#811: FILE: monit.c:811:
++        printf(" reload              - Reinitialize monit\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#811: FILE: monit.c:811:
++        printf(" reload              - Reinitialize monit\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#812: FILE: monit.c:812:
++        printf(" status [name]       - Print full status information for service(s)\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#812: FILE: monit.c:812:
++        printf(" status [name]       - Print full status information for service(s)\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#812: FILE: monit.c:812:
++        printf(" status [name]       - Print full status information for service(s)\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#813: FILE: monit.c:813:
++        printf(" summary [name]      - Print short status information for service(s)\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#813: FILE: monit.c:813:
++        printf(" summary [name]      - Print short status information for service(s)\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#813: FILE: monit.c:813:
++        printf(" summary [name]      - Print short status information for service(s)\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#814: FILE: monit.c:814:
++        printf(" quit                - Kill monit daemon process\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#814: FILE: monit.c:814:
++        printf(" quit                - Kill monit daemon process\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#815: FILE: monit.c:815:
++        printf(" validate            - Check all services and start if not running\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#815: FILE: monit.c:815:
++        printf(" validate            - Check all services and start if not running\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#815: FILE: monit.c:815:
++        printf(" validate            - Check all services and start if not running\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#816: FILE: monit.c:816:
++        printf(" procmatch <pattern> - Test process matching pattern\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#816: FILE: monit.c:816:
++        printf(" procmatch <pattern> - Test process matching pattern\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#817: FILE: monit.c:817:
++        printf("\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#817: FILE: monit.c:817:
++        printf("\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#818: FILE: monit.c:818:
++        printf("(Action arguments operate on services defined in the control file)\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#818: FILE: monit.c:818:
++        printf("(Action arguments operate on services defined in the control file)\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#818: FILE: monit.c:818:
++        printf("(Action arguments operate on services defined in the control file)\n");$
+
+ERROR:FUNCTION_WITHOUT_ARGS: Bad function definition - void version() should probably be void version(void)
+#824: FILE: monit.c:824:
++static void version() {
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#824: FILE: monit.c:824:
++static void version() {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#825: FILE: monit.c:825:
++        printf("This is Monit version %s\n", VERSION);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#825: FILE: monit.c:825:
++        printf("This is Monit version %s\n", VERSION);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#826: FILE: monit.c:826:
++        printf("Built with");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#826: FILE: monit.c:826:
++        printf("Built with");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#828: FILE: monit.c:828:
++        printf("out");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#828: FILE: monit.c:828:
++        printf("out");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#830: FILE: monit.c:830:
++        printf(" ssl, with");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#830: FILE: monit.c:830:
++        printf(" ssl, with");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#832: FILE: monit.c:832:
++        printf("out");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#832: FILE: monit.c:832:
++        printf("out");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#834: FILE: monit.c:834:
++        printf(" pam and with");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#834: FILE: monit.c:834:
++        printf(" pam and with");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#836: FILE: monit.c:836:
++        printf("out");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#836: FILE: monit.c:836:
++        printf("out");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#838: FILE: monit.c:838:
++        printf(" large files\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#838: FILE: monit.c:838:
++        printf(" large files\n");$
+
+WARNING:LONG_LINE_STRING: line over 80 characters
+#839: FILE: monit.c:839:
++        printf("Copyright (C) 2001-2016 Tildeslash Ltd. All Rights Reserved.\n");
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#839: FILE: monit.c:839:
++        printf("Copyright (C) 2001-2016 Tildeslash Ltd. All Rights Reserved.\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#839: FILE: monit.c:839:
++        printf("Copyright (C) 2001-2016 Tildeslash Ltd. All Rights Reserved.\n");$
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#846: FILE: monit.c:846:
++static void *heartbeat(void *args) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#847: FILE: monit.c:847:
++        set_signal_block();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#847: FILE: monit.c:847:
++        set_signal_block();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#848: FILE: monit.c:848:
++        LogInfo("M/Monit heartbeat started\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#848: FILE: monit.c:848:
++        LogInfo("M/Monit heartbeat started\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#849: FILE: monit.c:849:
++        LOCK(heartbeatMutex)$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#849: FILE: monit.c:849:
++        LOCK(heartbeatMutex)$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#850: FILE: monit.c:850:
++        {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#850: FILE: monit.c:850:
++        {$
+
+WARNING:LONG_LINE: line over 80 characters
+#851: FILE: monit.c:851:
++                while (! (Run.flags & Run_Stopped) && ! (Run.flags & Run_DoReload)) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#851: FILE: monit.c:851:
++                while (! (Run.flags & Run_Stopped) && ! (Run.flags & Run_DoReload)) {$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#851: FILE: monit.c:851:
++                while (! (Run.flags & Run_Stopped) && ! (Run.flags & Run_DoReload)) {$
+
+ERROR:SPACING: space prohibited after that '!' (ctx:BxW)
+#851: FILE: monit.c:851:
++                while (! (Run.flags & Run_Stopped) && ! (Run.flags & Run_DoReload)) {
+                        ^
+
+ERROR:SPACING: space prohibited after that '!' (ctx:WxW)
+#851: FILE: monit.c:851:
++                while (! (Run.flags & Run_Stopped) && ! (Run.flags & Run_DoReload)) {
+                                                       ^
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#852: FILE: monit.c:852:
++                        handle_mmonit(NULL);$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#852: FILE: monit.c:852:
++                        handle_mmonit(NULL);$
+
+WARNING:LONG_LINE: line over 80 characters
+#853: FILE: monit.c:853:
++                        struct timespec wait = {.tv_sec = Time_now() + Run.polltime, .tv_nsec = 0};
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#853: FILE: monit.c:853:
++                        struct timespec wait = {.tv_sec = Time_now() + Run.polltime, .tv_nsec = 0};$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#853: FILE: monit.c:853:
++                        struct timespec wait = {.tv_sec = Time_now() + Run.polltime, .tv_nsec = 0};$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#854: FILE: monit.c:854:
++                        Sem_timeWait(heartbeatCond, heartbeatMutex, wait);$
+
+WARNING:LINE_SPACING: Missing a blank line after declarations
+#854: FILE: monit.c:854:
++                        struct timespec wait = {.tv_sec = Time_now() + Run.polltime, .tv_nsec = 0};
++                        Sem_timeWait(heartbeatCond, heartbeatMutex, wait);
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#854: FILE: monit.c:854:
++                        Sem_timeWait(heartbeatCond, heartbeatMutex, wait);$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#855: FILE: monit.c:855:
++                }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#855: FILE: monit.c:855:
++                }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#856: FILE: monit.c:856:
++        }$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#856: FILE: monit.c:856:
++        }$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#857: FILE: monit.c:857:
++        END_LOCK;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#857: FILE: monit.c:857:
++        END_LOCK;$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#859: FILE: monit.c:859:
++        Ssl_threadCleanup();$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#859: FILE: monit.c:859:
++        Ssl_threadCleanup();$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#861: FILE: monit.c:861:
++        LogInfo("M/Monit heartbeat stopped\n");$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#861: FILE: monit.c:861:
++        LogInfo("M/Monit heartbeat stopped\n");$
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#862: FILE: monit.c:862:
++        return NULL;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#862: FILE: monit.c:862:
++        return NULL;$
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#869: FILE: monit.c:869:
++static RETSIGTYPE do_reload(int sig) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#870: FILE: monit.c:870:
++        Run.flags |= Run_DoReload;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#870: FILE: monit.c:870:
++        Run.flags |= Run_DoReload;$
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#877: FILE: monit.c:877:
++static RETSIGTYPE do_destroy(int sig) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#878: FILE: monit.c:878:
++        Run.flags |= Run_Stopped;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#878: FILE: monit.c:878:
++        Run.flags |= Run_Stopped;$
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#885: FILE: monit.c:885:
++static RETSIGTYPE do_wakeup(int sig) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#886: FILE: monit.c:886:
++        Run.flags |= Run_DoWakeup;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#886: FILE: monit.c:886:
++        Run.flags |= Run_DoWakeup;$
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#890: FILE: monit.c:890:
++/* A simple non-blocking reaper to ensure that we wait-for and reap all/any stray child processes
+
+WARNING:LONG_LINE_COMMENT: line over 80 characters
+#891: FILE: monit.c:891:
++ we may have created and not waited on, so we do not create any zombie processes at exit */
+
+WARNING:BLOCK_COMMENT_STYLE: Block comments use * on subsequent lines
+#891: FILE: monit.c:891:
++/* A simple non-blocking reaper to ensure that we wait-for and reap all/any stray child processes
++ we may have created and not waited on, so we do not create any zombie processes at exit */
+
+WARNING:BLOCK_COMMENT_STYLE: Block comments use a trailing */ on a separate line
+#891: FILE: monit.c:891:
++ we may have created and not waited on, so we do not create any zombie processes at exit */
+
+ERROR:OPEN_BRACE: open brace '{' following function declarations go on the next line
+#892: FILE: monit.c:892:
++static void waitforchildren(void) {
+
+ERROR:CODE_INDENT: code indent should use tabs where possible
+#893: FILE: monit.c:893:
++        while (waitpid(-1, NULL, WNOHANG) > 0) ;$
+
+WARNING:LEADING_SPACE: please, no spaces at the start of a line
+#893: FILE: monit.c:893:
++        while (waitpid(-1, NULL, WNOHANG) > 0) ;$
+
+WARNING:SPACING: space prohibited before semicolon
+#893: FILE: monit.c:893:
++        while (waitpid(-1, NULL, WNOHANG) > 0) ;
+
+ERROR:TRAILING_STATEMENTS: trailing statements should be on next line
+#893: FILE: monit.c:893:
++        while (waitpid(-1, NULL, WNOHANG) > 0) ;
+
+total: 630 errors, 542 warnings, 894 lines checked
+
+NOTE: Whitespace errors detected.
+      You may wish to use scripts/cleanpatch or scripts/cleanfile
+
+monit.c has style problems, please review.
+
+NOTE: If any of the errors are false positives, please report
+      them to the maintainer, see CHECKPATCH in MAINTAINERS.
