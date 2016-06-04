@@ -1,5 +1,5 @@
 ##Purpose
-Purpose of the library is to publish output from [checkpatch](https://github.com/torvalds/linux/blob/master/scripts/checkpatch.pl) to a format [jenkins](https://jenkins.io/) understands so that we can take advantage of their tools to publish checkpatch output and continuos integration becomes easy.
+Purpose of the library is to publish output from [checkpatch](https://github.com/torvalds/linux/blob/master/scripts/checkpatch.pl) to a format [jenkins](https://jenkins.io/) understands so that we can take advantage of their tools to publish checkpatch output and continiuos integration becomes easy.
 
 ##Approach
 We are going to take following approach
