@@ -8,5 +8,10 @@ We are going to take following approach
 * I am not conversant with all the features of Juint reports. So the xml file generated could be very minimal. Patches/Pull requests for extension are welcome.
 
 ## How to run
-TODO
+
+```bash
+# --show-types is mandatory. 
+# Use --patch for patch
+checkpatch.pl --no-signoff --no-tree --show-types -f file | python checkpatch_to_xml.py > /tmp/junit_result.xml
+```
 
